@@ -133,8 +133,35 @@ a:link {
     transform-origin: top left; /* Set origin for scaling from top-left corner */
 
     transform:
-        translate(-49vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
+        translate(-1.5vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
 
     transition:
         transform ease-in-out .6s; /* Smoothly move and scale at the same time over .6 seconds */
+}
+
+/* Social Media Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: calc(1vw); /* Space between icons */
+  margin-top: calc(92vh); /* Space above icons */
+}
+
+.icon {
+  width: auto; /* Adjust size based on viewport height */
+  height: 2.5vh;
+  filter: grayscale(100%); /* Make icons grayscale initially */
+  transition: filter .3s ease-in-out; /* Smooth hover effect */
+}
+
+.icon:hover {
+  filter: grayscale(0%); /* Remove grayscale on hover to show colors */
+}
+
+/* Footer Text Styling */
+.footer-text {
+  text-align: center;
+  margin-top: calc(92vh);
+  margin-left: calc(1vw);
+  font-size: calc(1.5vh);
 }

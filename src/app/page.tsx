@@ -48,6 +48,7 @@ const Page = () => {
  }, []);
 
  return (
+  <>
     <div className="animation-container">
       {/* Initial π-like symbol */}
       <Link href = "/" passHref>
@@ -61,6 +62,20 @@ const Page = () => {
         </div>
       </Link>
     </div>
+    <div className="social-icons">
+      <a href="mailto:j622560@tamu.edu" target="_blank" rel="noopener noreferrer">
+        <img src="/email.png" alt="Email" className="icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/justin-le-3a275a278/" target="_blank" rel="noopener noreferrer">
+        <img src="/linkedin.png" alt="LinkedIn" className="icon" />
+      </a>
+      <a href="https://github.com/Ju5t1nL3" target="_blank" rel="noopener noreferrer">
+        <img src="/github.png" alt="GitHub" className="icon" />
+      </a>
+    </div>
+    <footer className="footer-text">© 2024 Justin Le</footer>
+  </>
+    
  );
 };
 

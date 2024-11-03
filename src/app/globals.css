@@ -16,7 +16,7 @@ body {
   top: 50%; /* Start at center */
   left: 50%; /* Start at center */
   transform: translate(-50%, -50%); /* Center it exactly */
-  transition: transform ease-in-out .6s; /* Smooth initial movement */
+  transition: transform ease-in-out .8s; /* Smooth initial movement */
 }
 
 /* Logo symbols (π-like symbol, J, and L) */
@@ -136,7 +136,7 @@ a:link {
         translate(-2.4vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
 
     transition:
-        transform ease-in-out .6s; /* Smoothly move and scale at the same time over .6 seconds */
+        transform ease-in-out .8s; /* Smoothly move and scale at the same time over .8 seconds */
 }
 
 /* Social Media Icons Styling */
@@ -164,4 +164,48 @@ a:link {
   margin-top: calc(92vh);
   margin-left: calc(1vw);
   font-size: calc(1.5vh);
+}
+
+/* Top Navigation Buttons Styling (Around Logo) */
+.top-nav {
+  position: absolute;
+  top: calc(3.8vh); /* Position near the top of the page */
+  display: flex;
+  justify-content: center; /* Center all buttons */
+}
+
+/* Individual Button Styling */
+.nav-button {
+  background-color: transparent; /* Transparent background as requested */
+  color:#D5BDAF; /* Use muted brown color from palette */
+  font-size: calc(2vh);
+  padding-bottom: calc(.25vh);
+  border:none;
+  cursor:pointer;
+}
+
+/* Add specific margins for each button to control spacing */
+.nav-button:first-child { /* Leftmost button (About) */
+  margin-right: calc(26vw); /* Smaller gap to the right */
+  position: absolute
+}
+
+.nav-button:nth-child(2) { /* Second button (Work) */
+  margin-right: calc(14vw); /* Larger gap between Work and Resume */
+  position: absolute
+}
+
+.nav-button:nth-child(3) { /* Third button (Resume) */
+  margin-left: calc(14vw); /* Larger gap between Work and Resume */
+  position: absolute
+}
+
+.nav-button:last-child { /* Rightmost button (Contact) */
+  margin-left: calc(26vw); /* Smaller gap to the left */
+  position:absolute
+}
+
+/* Hover effect for buttons */
+.nav-button:hover {
+  text-decoration: underline; /* Underline on hover as requested */
 }

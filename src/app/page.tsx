@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const Page = () => {
+  const [showNavAndIcons, setShowNavAndIcons] = useState(false); // State to control visibility
 
  useEffect(() => {
     const jSymbol = document.querySelector('.j-symbol') as HTMLElement;
@@ -38,6 +39,8 @@ const Page = () => {
           // Step 4 - Move everything into top-left corner after reversing
           setTimeout(() => {
             document.querySelector('.animation-container')?.classList.add('logo-shrink');
+            // Show navigation buttons and social icons after animation is done
+            setShowNavAndIcons(true); // Set state to true after animation completes
           }, 2000); // Time before moving logo
 
         }, 3000); // Time before reversing animation
@@ -62,20 +65,44 @@ const Page = () => {
         </div>
       </Link>
     </div>
-    <div className="social-icons">
-      <a href="mailto:j622560@tamu.edu" target="_blank" rel="noopener noreferrer">
-        <img src="/email.png" alt="Email" className="icon" />
-      </a>
-      <a href="https://www.linkedin.com/in/justin-le-3a275a278/" target="_blank" rel="noopener noreferrer">
-        <img src="/linkedin.png" alt="LinkedIn" className="icon" />
-      </a>
-      <a href="https://github.com/Ju5t1nL3" target="_blank" rel="noopener noreferrer">
-        <img src="/github.png" alt="GitHub" className="icon" />
-      </a>
-    </div>
-    <footer className="footer-text">© 2024 Justin Le</footer>
+
+    {showNavAndIcons && (
+      <>
+        {/* Top Navigation Buttons */}
+        <div className="top-nav">
+          {/* Left Side Buttons */}
+          <Link href="/about" legacyBehavior passHref>
+            <a className="nav-button">About</a>
+          </Link>
+          <Link href="/work" legacyBehavior passHref>
+            <a className="nav-button">Work</a>
+          </Link>
+
+          {/* Right Side Buttons */}
+          <Link href="/resume" legacyBehavior passHref>
+            <a className="nav-button">Resume</a>
+          </Link>
+          <Link href="/contact" legacyBehavior passHref>
+            <a className="nav-button">Contact</a>
+          </Link>
+        </div>
+        
+
+        <div className="social-icons">
+          <a href="mailto:j622560@tamu.edu" target="_blank" rel="noopener noreferrer">
+            <img src="/email.png" alt="Email" className="icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/justin-le-3a275a278/" target="_blank" rel="noopener noreferrer">
+            <img src="/linkedin.png" alt="LinkedIn" className="icon" />
+          </a>
+          <a href="https://github.com/Ju5t1nL3" target="_blank" rel="noopener noreferrer">
+            <img src="/github.png" alt="GitHub" className="icon" />
+          </a>
+        </div>
+        <footer className="footer-text">© 2024 Justin Le</footer>
+      </>
+    )}
   </>
-    
  );
 };
 

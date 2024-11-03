@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 
 const Page = () => {
 
@@ -49,14 +50,16 @@ const Page = () => {
  return (
     <div className="animation-container">
       {/* Initial π-like symbol */}
-      <div className="logo-symbols">
-        <div className="j-symbol">J
-          <div className="ustin-text">ustin</div>
+      <Link href = "/" passHref>
+        <div className="logo-symbols">
+          <div className="j-symbol">J
+            <div className="ustin-text">ustin</div>
+          </div>
+          <div className="l-symbol">L
+            <div className="e-text">e</div>
+          </div>
         </div>
-        <div className="l-symbol">L
-          <div className="e-text">e</div>
-        </div>
-      </div>
+      </Link>
     </div>
  );
 };

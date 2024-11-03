@@ -136,7 +136,14 @@ a:link {
         translate(-2.4vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
 
     transition:
-        transform ease-in-out .8s; /* Smoothly move and scale at the same time over .8 seconds */
+        transform ease-in-out .4s; /* Smoothly move and scale at the same time over .8 seconds */
+}
+
+.fake-logo-shrink {
+  transform-origin: top left; /* Set origin for scaling from top-left corner */
+
+  transform:
+      translate(4.9vw, -33.1vh) scale(.3); /* Move towards top-left while shrinking */
 }
 
 /* Social Media Icons Styling */
@@ -205,7 +212,7 @@ a:link {
   position:absolute
 }
 
-/* Hover effect for buttons */
-.nav-button:hover {
-  text-decoration: underline; /* Underline on hover as requested */
+/* Underline on hover for all buttons */
+.nav-button:hover, .nav-button.active { 
+    text-decoration: underline; /* Underline on hover and when active (current page) */ 
 }

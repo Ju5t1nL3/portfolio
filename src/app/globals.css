@@ -31,7 +31,7 @@ a:link {
 
 /* Styling for J and L symbols */
 .j-symbol, .l-symbol {
-  font-size: 8vw; /* Use viewport width for font size instead of fixed pixels for responsiveness */
+  font-size: 12vw; /* Use viewport width for font size instead of fixed pixels for responsiveness */
   position: relative; /* Make J and L relative so that 'ustin' and 'e' can be positioned next to them */
   color: #D5BDAF;
 }
@@ -43,13 +43,13 @@ a:link {
   position: absolute;
 
   /* Rounded edges for smoother appearance */
-  width: calc(100% + 5vw); /* Use vw (viewport width) instead of fixed pixels for responsiveness */
-  height: 1.5vw; /* Adjust thickness based on viewport width */
+  width: calc(100% + 7vw); /* Use vw (viewport width) instead of fixed pixels for responsiveness */
+  height: 1.7vw; /* Adjust thickness based on viewport width */
 
   background-color: #D5BDAF; /* Same color as J */
 
   /* Move bar down so it touches both J and L */
-  top: calc(2.5vw); /* Adjusted position based on viewport width */
+  top: calc(4.1vw); /* Adjusted position based on viewport width */
 
   /* Add rounded corners for smoothness */
   border-radius: .75vw;
@@ -70,13 +70,13 @@ a:link {
 }
 
 .ustin-text {
-    left :calc(4vw); /* Use vw instead of fixed pixels for positioning next to J */
-    top :calc(4vw); 
+    left :calc(6vw); /* Use vw instead of fixed pixels for positioning next to J */
+    top :calc(6vw); 
 }
 
 .e-text {
-    left :calc(4vw); 
-    top :calc(4vw);
+    left :calc(6vw); 
+    top :calc(6vw);
 }
 
 /* Animation classes */
@@ -133,7 +133,7 @@ a:link {
     transform-origin: top left; /* Set origin for scaling from top-left corner */
 
     transform:
-        translate(-1.5vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
+        translate(-2.4vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
 
     transition:
         transform ease-in-out .6s; /* Smoothly move and scale at the same time over .6 seconds */

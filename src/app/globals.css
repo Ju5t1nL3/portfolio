@@ -8,6 +8,12 @@ body {
   height: 100vh;
   background-color: #EDEDE9; /* Light Gray Background */
   font-family: 'Comic Sans MS', cursive; /* Handwritten style */
+
+  cursor: none;
+}
+
+a, .nav-button, .icon {
+  cursor: none;
 }
 
 /* Container for the animation */
@@ -181,7 +187,6 @@ a:link {
   font-size: calc(2vh);
   padding-bottom: calc(.25vh);
   border:none;
-  cursor:pointer;
 }
 
 /* Add specific margins for each button to control spacing */

@@ -1,4 +1,6 @@
 import "./globals.css";
+import StickyCursor from '../components/stickyCursor';
+import RegCursor from '../components/regCursor';
 
 export const metadata = {
   title: 'Justin Le',
@@ -10,9 +12,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
+
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <StickyCursor/>
+        <RegCursor/>
+        {children}
+      </body>
     </html>
   );
 }

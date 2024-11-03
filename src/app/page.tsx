@@ -1,101 +1,64 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import React, { useEffect } from 'react';
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+const Page = () => {
+
+ useEffect(() => {
+    const jSymbol = document.querySelector('.j-symbol') as HTMLElement;
+    const lSymbol = document.querySelector('.l-symbol') as HTMLElement;
+    const ustinText = document.querySelector('.ustin-text') as HTMLElement;
+    const eText = document.querySelector('.e-text') as HTMLElement;
+
+    // Step 1 - Transition from π-like symbol to JL
+    setTimeout(() => {
+      jSymbol.classList.add('shrink-bar'); // Shrink the bar
+      jSymbol.classList.add('move-j-left'); // Move J to left
+      lSymbol.classList.add('move-l-right'); // Move L to right
+
+      // Step 2 - Reveal 'ustin' and 'e'
+      setTimeout(() => {
+        ustinText.classList.add('show-ustin');
+        eText.classList.add('show-e');
+
+        // Step 3 - Reverse animation back to π-like symbol
+        setTimeout(() => {
+          ustinText.classList.remove('show-ustin');
+          eText.classList.remove('show-e');
+          jSymbol.classList.remove('shrink-bar');
+          jSymbol.classList.remove('move-j-left');
+          lSymbol.classList.remove('move-l-right');
+
+          // Extend the bar back out when reverting
+          jSymbol.classList.add('extend-bar');
+          jSymbol.classList.add('move-j-right'); // Move J back right
+          lSymbol.classList.add('move-l-left'); // Move L back left
+
+          // Step 4 - Move everything into top-left corner after reversing
+          setTimeout(() => {
+            document.querySelector('.animation-container')?.classList.add('logo-shrink');
+          }, 2000); // Time before moving logo
+
+        }, 3000); // Time before reversing animation
+
+      }, 2000); // Time before revealing 'ustin' and 'e'
+
+    }, 2000); // Time before transitioning from π-like symbol
+ }, []);
+
+ return (
+    <div className="animation-container">
+      {/* Initial π-like symbol */}
+      <div className="logo-symbols">
+        <div className="j-symbol">J
+          <div className="ustin-text">ustin</div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="l-symbol">L
+          <div className="e-text">e</div>
+        </div>
+      </div>
     </div>
-  );
-}
+ );
+};
+
+export default Page;

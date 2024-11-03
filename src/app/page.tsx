@@ -79,9 +79,9 @@ const Page = () => {
           </Link>
 
           {/* Right Side Buttons */}
-          <Link href="/resume" legacyBehavior passHref>
-            <a className="nav-button">Resume</a>
-          </Link>
+          <a href = "/resume.pdf" target = "_blank" rel = "noopenernoreferrer" className="nav-button">
+            Resume
+          </a>
           <Link href="/contact" legacyBehavior passHref>
             <a className="nav-button">Contact</a>
           </Link>

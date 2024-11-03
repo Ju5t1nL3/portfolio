@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: 'hi, ',
-  description: 'Welcome to Next.js 101',
+  title: 'Justin Le',
+  description: 'Personal Portfolio',
 };
 
 export default function RootLayout({

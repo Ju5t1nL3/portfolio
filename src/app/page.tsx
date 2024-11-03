@@ -41,7 +41,7 @@ const Page = () => {
             document.querySelector('.animation-container')?.classList.add('logo-shrink');
             // Show navigation buttons and social icons after animation is done
             setShowNavAndIcons(true); // Set state to true after animation completes
-          }, 0); // Time before moving logo
+          }, 3000); // Time before moving logo
 
         }, 2000); // Time before reversing animation
 

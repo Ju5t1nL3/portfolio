@@ -139,13 +139,6 @@ a:link {
         transform ease-in-out .4s; /* Smoothly move and scale at the same time over .8 seconds */
 }
 
-.fake-logo-shrink {
-  transform-origin: top left; /* Set origin for scaling from top-left corner */
-
-  transform:
-      translate(4.9vw, -33.1vh) scale(.3); /* Move towards top-left while shrinking */
-}
-
 /* Social Media Icons Styling */
 .social-icons {
   display: flex;

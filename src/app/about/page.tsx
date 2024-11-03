@@ -10,17 +10,15 @@ const About = () => {
 
  return (
   <>
-    <div className="animation-container">
+    <div className="animation-container logo-shrink">
       {/* Initial π-like symbol */}
       <Link href = "/" passHref>
-        <div className="fake-logo-shrink">
-          <div className="logo-symbols">
-            <div className="j-symbol">J
-              <div className="ustin-text">ustin</div>
-            </div>
-            <div className="l-symbol">L
-              <div className="e-text">e</div>
-            </div>
+        <div className="logo-symbols">
+          <div className="j-symbol">
+            J
+          </div>
+          <div className="l-symbol">
+            L
           </div>
         </div>
       </Link>

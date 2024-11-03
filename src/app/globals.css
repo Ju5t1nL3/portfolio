@@ -129,7 +129,7 @@ body {
     transform-origin: top left; /* Set origin for scaling from top-left corner */
 
     transform:
-        translate(-495%, -220%) scale(.3); /* Move towards top-left while shrinking */
+        translate(-49vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
 
     transition:
         transform ease-in-out .6s; /* Smoothly move and scale at the same time over .6 seconds */

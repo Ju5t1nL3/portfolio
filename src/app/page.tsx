@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Page = () => {
   const [showNavAndIcons, setShowNavAndIcons] = useState(false); // State to control visibility
@@ -68,6 +69,27 @@ const Page = () => {
 
     {showNavAndIcons && (
       <>
+        <div className="container">
+          {/* Title Animation */}
+          <motion.h1
+            className="title"
+            initial={{ opacity: 0, y: 50 }} // Start off-screen and invisible
+            animate={{ opacity: 1, y: 0 }} // Animate into view
+            transition={{ duration: 1, ease: "easeOut" }} // Smooth animation
+          >
+            Welcome to My Portfolio
+          </motion.h1>
+
+          {/* Subheading Animation */}
+          <motion.h2
+            className="subheading"
+            initial={{ opacity: 0, y: 50 }} // Start off-screen and invisible
+            animate={{ opacity: 1, y: 0 }} // Animate into view
+            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }} // Delayed animation for subheading
+          >
+            Frontend Developer & Designer
+          </motion.h2>
+        </div>
         {/* Top Navigation Buttons */}
         <div className="top-nav">
           {/* Left Side Buttons */}

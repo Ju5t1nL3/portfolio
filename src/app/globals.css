@@ -214,3 +214,24 @@ a:link {
 .nav-button:hover, .nav-button.active { 
     text-decoration: underline; /* Underline on hover and when active (current page) */ 
 }
+
+/* Container for Title, Subheading, and Icons */
+.container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Title Styling */
+.title {
+  font-size: calc(3rem + 2vw);
+  color: #D5BDAF; /* Muted Brown from palette */
+}
+
+/* Subheading Styling */
+.subheading {
+  font-size: calc(1.5rem + 1vw);
+  color: #E3D5CA; /* Light Tan from palette */
+}

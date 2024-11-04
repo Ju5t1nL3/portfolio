@@ -354,3 +354,22 @@ a:link {
      position:absolute ;
      right :calc(-7vh) ;
 }
+
+/* Carousel Dots */
+.carousel-dots {
+  display:flex ;
+  justify-content:center ;
+  margin-top :20px ;
+}
+
+.dot{
+    width :10px ;
+    height :10px ;
+    background-color:#ccc ; /* Default dot color */
+    border-radius :50% ;
+    margin-right :5px;
+}
+
+.filled{
+    background-color:#22577A; /* Filled dot color */
+}

@@ -101,7 +101,7 @@ const About = () => {
             className="fun-facts-grid"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {funFacts.slice(currentIndex, currentIndex + panelsToShow).map((fact, index) => (
               <motion.div 
@@ -121,6 +121,15 @@ const About = () => {
           {currentIndex + panelsToShow < totalPanels && (
             <button onClick={handleNext} className="carousel-arrow right-arrow">→</button>
           )}
+        </div>
+        {/* Carousel Dots */}
+        <div className="carousel-dots">
+          {Array(totalPanels).fill().map((_, index) => (
+            <span 
+              key={index} 
+              className={`dot ${index >= currentIndex && index < currentIndex + panelsToShow ? 'filled' : ''}`} 
+            />
+          ))}
         </div>
       </section>
 

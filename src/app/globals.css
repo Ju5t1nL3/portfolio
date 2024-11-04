@@ -341,16 +341,16 @@ a:link {
 .carousel-arrow {
    background-color :transparent ;
    border:none ;
-   font-size :calc(3rem);
+   font-size :calc(6vh);
    cursor: none;
 }
 
 .left-arrow{
      position:absolute ;
-     left :calc(2vw) ;
+     left :calc(-7vh) ;
 }
 
 .right-arrow{
      position:absolute ;
-     right :calc(2vw) ;
+     right :calc(-7vh) ;
 }

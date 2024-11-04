@@ -170,13 +170,13 @@ a:link {
 .social-icons.highlight::before {
   content: '';
   position: absolute;
-  top: -20px; /* Adjust as needed */
-  left: -20px; /* Adjust as needed */
-  width: calc(100% + 40px); /* Adjust as needed */
-  height: calc(100% + 40px); /* Adjust as needed */
+  top: -2.5vh; /* Adjust as needed */
+  left: -2.6vh; /* Adjust as needed */
+  width: calc(100% + 4vh); /* Adjust as needed */
+  height: calc(100% + 4vh); /* Adjust as needed */
   
   border-radius: 50%;
-  border: 3px solid #22577A; /* Dark Blue border color */
+  border: 1vh solid #748CAB; /* Dark Blue border color */
   
   animation: pulseCircle 2s ease-in-out forwards;
 }
@@ -269,4 +269,5 @@ a:link {
   color: #748CAB; /* Light Tan from palette */
   text-align: center;
   width: calc(50vh);
+  line-height: 150%;
 }

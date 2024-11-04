@@ -17,8 +17,96 @@ const About = () => {
 
   // Fun facts data
   const funFacts = [
-    { title: "🎮 Gamer at Heart", description: "I love playing video games in my free time, especially strategy and puzzle games." },
-    { title: "📚 Avid Reader", description: "I'm always reading something new, whether it's fiction or non-fiction." },
+    { title: "Languages", 
+      description: 
+      <>
+        <ul className="no-bullets">
+          <li>
+            <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
+              <img src="/python.png" alt="Python" className='listpics' />
+              &nbsp;&nbsp;Python
+            </a>
+          </li>
+          <li>
+            <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer">
+              <img src="/java.png" alt="Java" className='listpics' />
+              &nbsp;&nbsp;Java
+            </a>
+          </li>
+          <li>
+            <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
+              <img src="/typescript.png" alt="TypeScript" className='listpics' />
+              &nbsp;&nbsp;TypeScript
+            </a>
+          </li>
+          <li>
+            <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
+              <img src="/javascript.png" alt="JavaScript" className='listpics' />
+              &nbsp;&nbsp;JavaScript
+            </a>
+          </li>
+          <li>
+            <a href="https://www.w3schools.com/sql/" target="_blank" rel="noopener noreferrer">
+              <img src="/sql.png" alt="SQL" className='listpics' />
+              &nbsp;&nbsp;SQL
+            </a>
+          </li>
+          <li>
+            <a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">
+              <img src="/html.png" alt="HTML" className='listpics' />
+              &nbsp;&nbsp;HTML
+            </a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noopener noreferrer">
+              <img src="/css.png" alt="CSS" className='listpics' />
+              &nbsp;&nbsp;CSS
+            </a>
+          </li>
+        </ul>
+      </> },
+    { title: "Frameworks", 
+      description: 
+      <>
+        <ul className="no-bullets">
+          <li>
+            <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">
+              <img src="/pytorch.png" alt="PyTorch" className='listpics' />
+              &nbsp;&nbsp;PyTorch
+            </a>
+          </li>
+          <li>
+            <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+              <img src="/nextjs.png" alt="Next.js" className='listpics' />
+              &nbsp;&nbsp;Next.js
+            </a>
+          </li>
+          <li>
+            <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
+              <img src="/react.png" alt="React" className='listpics' />
+              &nbsp;&nbsp;React
+            </a>
+          </li>
+          <li>
+            <a href="https://flask.palletsprojects.com/en/stable/" target="_blank" rel="noopener noreferrer">
+              <img src="/flask.png" alt="Flask" className='listpics' />
+              &nbsp;&nbsp;Flask
+            </a>
+          </li>
+          <li>
+            <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
+              <img src="/tailwind.png" alt="Tailwind CSS" className='listpics' />
+              &nbsp;&nbsp;Tailwind CSS
+            </a>
+          </li>
+          <li>
+            <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
+              <img src="/git.png" alt="Git" className='listpics' />
+              &nbsp;&nbsp;Git
+            </a>
+          </li>
+        </ul>
+      </> },
     { title: "🌎 Traveler", description: "I've traveled to over 10 countries and hope to visit many more in the future." },
     { title: "🎨 Creative Thinker", description: "I enjoy drawing and sketching in my spare time. It's a great way to relax and express creativity." },
     { title: "💻 Tech Enthusiast", description: "I'm always excited about learning new technologies and staying up-to-date with industry trends." },
@@ -86,14 +174,29 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }} // Animate into view
           transition={{ duration: 0.5, delay: 0.4 }} // Smooth animation with delay
         >
-          Hi! I'm Justin, a software engineering student at Texas A&M University. I have a passion for building things that make a difference in the world. When I'm not coding, you can find me exploring new technologies, reading, or enjoying outdoor activities.
+          Hi there! I'm Justin -- a current Engineering Honors student at Texas A&M studying Computer Science with planned minors in Mathematics and Statistics (May 2028). However, I originally hail from Sugar Land, TX. I love to program in general, but my interests mainly
+          lie within machine learning. With that said, you can often find me at a hackathon (I already plan to attend HackUTD!).
+          <br></br>
+          <br></br>
+          Currently, I'm working on creating and training a model with computer vision by utilizing PyTorch. With a group of friends, I am also competing in the 
+          <a href="https://ig.utexas.edu/texas-space-grant/2024/space-teams-university-lunar-search-rescue-design-challenge/" target="_blank" rel="noopener noreferrer"> Texas Lunar Search & Rescue Team competition, </a>
+          where we just completed the first round!
+
         </motion.p>
 
         {/* Carousel for Fun Facts */}
         <div className="carousel-container">
           {/* Left Arrow */}
           {currentIndex > 0 && (
-            <button onClick={handlePrev} className="carousel-arrow left-arrow">←</button>
+            <motion.button
+              onClick={handlePrev}
+              className="carousel-arrow left-arrow"
+              initial={{ opacity: 0, y: 50 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5, delay: .2 }}
+            >
+              ←
+            </motion.button>
           )}
 
           {/* Fun Facts Grid with Animation */}
@@ -112,25 +215,39 @@ const About = () => {
                 transition={{ duration: 0.5, delay: (index + 3) * 0.2 }} // Staggered animation
               >
                 <h3>{fact.title}</h3>
-                <p>{fact.description}</p>
+                <>{fact.description}</>
               </motion.div>
             ))}
           </motion.div>
 
           {/* Right Arrow */}
           {currentIndex + panelsToShow < totalPanels && (
-            <button onClick={handleNext} className="carousel-arrow right-arrow">→</button>
+            <motion.button
+              onClick={handleNext}
+              className="carousel-arrow right-arrow"
+              initial={{ opacity: 0, y: 50 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5, delay: 1.2 }}
+            >
+              →
+            </motion.button>
           )}
         </div>
         {/* Carousel Dots */}
-        <div className="carousel-dots">
+        <motion.div
+          className="carousel-dots"
+          initial={{ opacity: 0, y: 50 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5, delay: 1 }}
+        >
           {Array(totalPanels).fill().map((_, index) => (
             <span 
               key={index} 
               className={`dot ${index >= currentIndex && index < currentIndex + panelsToShow ? 'filled' : ''}`} 
             />
           ))}
-        </div>
+
+        </motion.div>
       </section>
 
       {/* Social Media Icons */}

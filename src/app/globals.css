@@ -295,18 +295,18 @@ a:link {
 .about-heading {
   font-size: calc(6vh);
   color: #3E5C76;
-  margin-top: -20vh;
+  margin-top: -10vh;
   text-align: left;
   left: 1vh;
   position: relative;
 }
 
 .about-blurb {
-  font-size: calc(2.29vh);
+  font-size: calc(2vh);
   color: #748CAB;
   position: relative;
   text-align: left;
-  top: -1vh;
+  top: -3vh;
   left: 1vh;
   width: 120vh;
 }
@@ -322,19 +322,40 @@ a:link {
 .fun-facts-grid {
   display: flex;
   flex-direction :row ; /* Horizontal row */
-  justify-content :center ; /* Center horizontally */
+  justify-content :left ; /* Center horizontally */
   gap :5vh ; /* Space between each fact */
-  margin-top :20px ;
-  height: 30vh;
+  height: 40vh;
   overflow:hidden ; /* Hide overflow for smooth scrolling */
 }
 
 .fun-fact {
   background-color: #d3dbe5; /* White background for each fact */
-  padding: calc(2vh + .5vw);
+  padding: calc(3vh);
   border-radius: 3vh;
   width: 30vh;
-  font-size: calc(1.42vh);
+  font-size: calc(1.5vh);
+  text-align: left;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+li{
+  filter: grayscale(100%);
+  transition: filter, scale .3s ease-in-out;
+  line-height: 250%;
+}
+
+li:hover{
+  scale:1.2;
+  filter: grayscale(0%)
+}
+
+.listpics{
+  height:1vh;
+  width: auto;
+  height: 2.5vh;
 }
 
 /* Carousel Arrows */

@@ -37,7 +37,7 @@ a:link {
 
 /* Styling for J and L symbols */
 .j-symbol, .l-symbol {
-  font-size: 12vw; /* Use viewport width for font size instead of fixed pixels for responsiveness */
+  font-size: 25vh; /* Use viewport width for font size instead of fixed pixels for responsiveness */
   position: relative; /* Make J and L relative so that 'ustin' and 'e' can be positioned next to them */
   color: #748CAB;
   font-family: 'Lucida Handwriting'; /* Handwritten style */
@@ -50,16 +50,16 @@ a:link {
   position: absolute;
 
   /* Rounded edges for smoother appearance */
-  width: calc(100% + 9vw); /* Use vw (viewport width) instead of fixed pixels for responsiveness */
-  height: 1.8vw; /* Adjust thickness based on viewport width */
+  width: calc(100% + 19vh); /* Use vw (viewport width) instead of fixed pixels for responsiveness */
+  height: 3.8vh; /* Adjust thickness based on viewport width */
 
   background-color: #748CAB; /* Same color as J */
 
   /* Move bar down so it touches both J and L */
-  top: calc(2.5vw); /* Adjusted position based on viewport width */
+  top: calc(5.2vh); /* Adjusted position based on viewport width */
 
   /* Add rounded corners for smoothness */
-  border-radius: 10vw;
+  border-radius: 20vh;
 
   /* Initial state with full width */
   transform-origin: center;
@@ -71,19 +71,19 @@ a:link {
     opacity :0;
 
     color:#748CAB;
-    font-size :3vw; /* Ensure font size matches J and L using viewport width */
+    font-size :6vh; /* Ensure font size matches J and L using viewport width */
 
     position :absolute;
 }
 
 .ustin-text {
-    left :calc(6vw); /* Use vw instead of fixed pixels for positioning next to J */
-    top :calc(6vw); 
+    left :calc(13vh); /* Use vh instead of fixed pixels for positioning next to J */
+    top :calc(13vh); 
 }
 
 .e-text {
-    left :calc(6vw); 
-    top :calc(6vw);
+    left :calc(14vh); 
+    top :calc(13vh);
 }
 
 /* Animation classes */
@@ -101,7 +101,7 @@ a:link {
 
 /* Move J to left when transitioning from π-like symbol to JL */
 .move-j-left {
-   transform :translateX(-6vw); 
+   transform :translateX(-12vh); 
    transition :transform .8s ease-in-out ;
 }
 
@@ -112,7 +112,7 @@ a:link {
 
 /* Move L to right when transitioning from π-like symbol to JL */
 .move-l-right {
-   transform :translateX(6vw); 
+   transform :translateX(12vh); 
    transition :transform .8s ease-in-out ;
 }
 
@@ -125,14 +125,14 @@ a:link {
 .show-ustin {
    opacity :1 ;
    transition :opacity .8s ease-in-out ,transform .8s ease-in-out ;
-   transform :translateX(1vw);
+   transform :translateX(2vh);
 }
 
 /* Show 'e' next to L */
 .show-e {
    opacity :1 ;
    transition :opacity .8s ease-in-out ,transform .8s ease-in-out ;
-   transform :translateX(1vw);
+   transform :translateX(2vh);
 }
 
 /* Move logo smoothly to top-left corner while shrinking it down in size */
@@ -140,7 +140,7 @@ a:link {
     transform-origin: top left; /* Set origin for scaling from top-left corner */
 
     transform:
-        translate(-2.4vw, -49vh) scale(.3); /* Move towards top-left while shrinking */
+        translate(-4.8vh, -49vh) scale(.3); /* Move towards top-left while shrinking */
 
     transition:
         transform ease-in-out .4s; /* Smoothly move and scale at the same time over .8 seconds */
@@ -150,8 +150,9 @@ a:link {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: calc(1vw); /* Space between icons */
+  gap: calc(2.5vh); /* Space between icons */
   margin-top: calc(92vh); /* Space above icons */
+  position: relative; /* For positioning highlight circle */
 }
 
 .icon {
@@ -165,11 +166,40 @@ a:link {
   filter: grayscale(0%); /* Remove grayscale on hover to show colors */
 }
 
+/* Highlight Circle Animation */
+.social-icons.highlight::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Adjust as needed */
+  left: -20px; /* Adjust as needed */
+  width: calc(100% + 40px); /* Adjust as needed */
+  height: calc(100% + 40px); /* Adjust as needed */
+  
+  border-radius: 50%;
+  border: 3px solid #22577A; /* Dark Blue border color */
+  
+  animation: pulseCircle 2s ease-in-out forwards;
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulseCircle {
+ from {
+   transform: scale(0);
+   opacity: 1;
+ }
+ to {
+   transform: scale(1);
+   opacity: 0;
+ }
+}
+
+
+
 /* Footer Text Styling */
 .footer-text {
   text-align: center;
   margin-top: calc(92vh);
-  margin-left: calc(1vw);
+  margin-left: calc(2.5vh);
   font-size: calc(1.5vh);
 }
 
@@ -185,29 +215,29 @@ a:link {
 .nav-button {
   background-color: transparent; /* Transparent background as requested */
   color:#748CAB; 
-  font-size: calc(2vh);
+  font-size: calc(2.3vh);
   padding-bottom: calc(.25vh);
   border:none;
 }
 
 /* Add specific margins for each button to control spacing */
 .nav-button:first-child { /* Leftmost button (About) */
-  margin-right: calc(26vw); /* Smaller gap to the right */
+  margin-right: calc(70vh); /* Smaller gap to the right */
   position: absolute
 }
 
 .nav-button:nth-child(2) { /* Second button (Work) */
-  margin-right: calc(14vw); /* Larger gap between Work and Resume */
+  margin-right: calc(40vh); /* Larger gap between Work and Resume */
   position: absolute
 }
 
 .nav-button:nth-child(3) { /* Third button (Resume) */
-  margin-left: calc(14vw); /* Larger gap between Work and Resume */
+  margin-left: calc(40vh); /* Larger gap between Work and Resume */
   position: absolute
 }
 
 .nav-button:last-child { /* Rightmost button (Contact) */
-  margin-left: calc(26vw); /* Smaller gap to the left */
+  margin-left: calc(70vh); /* Smaller gap to the left */
   position:absolute
 }
 
@@ -228,12 +258,15 @@ a:link {
 
 /* Title Styling */
 .title {
-  font-size: calc(4.5vw);
+  font-size: calc(9.5vh);
   color: #3E5C76; /* Muted Brown from palette */
 }
 
 /* Subheading Styling */
 .subheading {
-  font-size: calc(2.78vw);
+  font-size: calc(2.24vh);
+  margin-top: calc(-2.5vh);
   color: #748CAB; /* Light Tan from palette */
+  text-align: center;
+  width: calc(50vh);
 }

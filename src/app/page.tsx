@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const Page = () => {
   const [showNavAndIcons, setShowNavAndIcons] = useState(false); // State to control visibility
+  const socialIconsRef = useRef<HTMLDivElement | null>(null);
 
  useEffect(() => {
     const jSymbol = document.querySelector('.j-symbol') as HTMLElement;
@@ -51,6 +52,20 @@ const Page = () => {
     }, 2000); // Time before transitioning from π-like symbol
  }, []);
 
+ const handleContactClick = () => {
+  // Scroll to social icons
+  socialIconsRef.current?.scrollIntoView({ behavior: "smooth" });
+
+  // Trigger animation (using Framer Motion)
+  const iconContainer = document.querySelector('.social-icons');
+  iconContainer?.classList.add('highlight');
+
+  // Remove highlight after 2 seconds
+  setTimeout(() => {
+    iconContainer?.classList.remove('highlight');
+  }, 2000); // Adjust time as necessary
+};
+
  return (
   <>
     <div className="animation-container">
@@ -87,7 +102,7 @@ const Page = () => {
             animate={{ opacity: 1, y: 0 }} // Animate into view
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }} // Delayed animation for subheading
           >
-            Frontend Developer & Designer
+            I focus on software engineering with a purpose. Currently studying at Texas A&M, I'm passionate about creating to improve the world surrounding me.
           </motion.h2>
         </div>
         {/* Top Navigation Buttons */}
@@ -104,13 +119,11 @@ const Page = () => {
           <a href = "/resume.pdf" target = "_blank" rel = "noopenernoreferrer" className="nav-button">
             Resume
           </a>
-          <Link href="/contact" legacyBehavior passHref>
-            <a className="nav-button">Contact</a>
-          </Link>
+          <button onClick={handleContactClick} className="nav-button">Contact</button>
         </div>
         
 
-        <div className="social-icons">
+        <div ref={socialIconsRef} className="social-icons">
           <a href="mailto:j622560@tamu.edu" target="_blank" rel="noopener noreferrer">
             <img src="/email.png" alt="Email" className="icon" />
           </a>

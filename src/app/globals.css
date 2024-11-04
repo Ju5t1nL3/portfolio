@@ -7,7 +7,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #F0EBD8; /* Light Gray Background */
-  font-family: 'GeistSans'; /* Handwritten style */
+  font-family: 'GeistSans', 'Comic Sans MS'; /* Handwritten style */
 
   cursor: none;
 }

@@ -1,4 +1,5 @@
 import "./globals.css";
+import { GeistSans } from 'geist/font/sans';
 import StickyCursor from '../components/stickyCursor';
 import RegCursor from '../components/regCursor';
 
@@ -15,7 +16,7 @@ export default function RootLayout({
 
   return (
 
-    <html lang="en">
+    <html lang="en" className={GeistSans.className}>
       <body>
         <StickyCursor/>
         <RegCursor/>

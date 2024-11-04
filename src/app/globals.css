@@ -6,8 +6,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #EDEDE9; /* Light Gray Background */
-  font-family: 'Comic Sans MS', cursive; /* Handwritten style */
+  background-color: #F0EBD8; /* Light Gray Background */
+  font-family: 'GeistSans'; /* Handwritten style */
 
   cursor: none;
 }
@@ -39,7 +39,8 @@ a:link {
 .j-symbol, .l-symbol {
   font-size: 12vw; /* Use viewport width for font size instead of fixed pixels for responsiveness */
   position: relative; /* Make J and L relative so that 'ustin' and 'e' can be positioned next to them */
-  color: #D5BDAF;
+  color: #748CAB;
+  font-family: 'Lucida Handwriting'; /* Handwritten style */
 }
 
 /* Extend top of J to meet L (π-like symbol) */
@@ -49,16 +50,16 @@ a:link {
   position: absolute;
 
   /* Rounded edges for smoother appearance */
-  width: calc(100% + 7vw); /* Use vw (viewport width) instead of fixed pixels for responsiveness */
-  height: 1.7vw; /* Adjust thickness based on viewport width */
+  width: calc(100% + 9vw); /* Use vw (viewport width) instead of fixed pixels for responsiveness */
+  height: 1.8vw; /* Adjust thickness based on viewport width */
 
-  background-color: #D5BDAF; /* Same color as J */
+  background-color: #748CAB; /* Same color as J */
 
   /* Move bar down so it touches both J and L */
-  top: calc(4.1vw); /* Adjusted position based on viewport width */
+  top: calc(2.5vw); /* Adjusted position based on viewport width */
 
   /* Add rounded corners for smoothness */
-  border-radius: .75vw;
+  border-radius: 10vw;
 
   /* Initial state with full width */
   transform-origin: center;
@@ -69,8 +70,8 @@ a:link {
 .ustin-text, .e-text {
     opacity :0;
 
-    color:#D5BDAF;
-    font-size :4vw; /* Ensure font size matches J and L using viewport width */
+    color:#748CAB;
+    font-size :3vw; /* Ensure font size matches J and L using viewport width */
 
     position :absolute;
 }
@@ -139,7 +140,7 @@ a:link {
     transform-origin: top left; /* Set origin for scaling from top-left corner */
 
     transform:
-        translate(-2.4vw, -50vh) scale(.3); /* Move towards top-left while shrinking */
+        translate(-2.4vw, -49vh) scale(.3); /* Move towards top-left while shrinking */
 
     transition:
         transform ease-in-out .4s; /* Smoothly move and scale at the same time over .8 seconds */
@@ -183,7 +184,7 @@ a:link {
 /* Individual Button Styling */
 .nav-button {
   background-color: transparent; /* Transparent background as requested */
-  color:#D5BDAF; /* Use muted brown color from palette */
+  color:#748CAB; 
   font-size: calc(2vh);
   padding-bottom: calc(.25vh);
   border:none;
@@ -219,19 +220,20 @@ a:link {
 .container {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center vertically */
+  justify-content: flex-start; /* Center vertically */
   align-items: center; /* Center horizontally */
-  height: 100vh; /* Full viewport height */
+  height: 80vh; /* Full viewport height */
+  position: absolute;
 }
 
 /* Title Styling */
 .title {
-  font-size: calc(3rem + 2vw);
-  color: #D5BDAF; /* Muted Brown from palette */
+  font-size: calc(4.5vw);
+  color: #3E5C76; /* Muted Brown from palette */
 }
 
 /* Subheading Styling */
 .subheading {
-  font-size: calc(1.5rem + 1vw);
-  color: #E3D5CA; /* Light Tan from palette */
+  font-size: calc(2.78vw);
+  color: #748CAB; /* Light Tan from palette */
 }

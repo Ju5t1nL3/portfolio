@@ -13,7 +13,7 @@ const About = () => {
 
   // Total number of panels and how many to show at a time
   const totalPanels = 7;
-  const panelsToShow = 5;
+  const panelsToShow = 3;
 
   // Fun facts data
   const funFacts = [
@@ -76,8 +76,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }} // Animate into view
           transition={{ duration: 0.5, delay: 0.2 }} // Smooth animation with delay
         >
-        
-          About Me
+          About
         </motion.h1>
 
         {/* Blurb */}
@@ -89,16 +88,6 @@ const About = () => {
         >
           Hi! I'm Justin, a software engineering student at Texas A&M University. I have a passion for building things that make a difference in the world. When I'm not coding, you can find me exploring new technologies, reading, or enjoying outdoor activities.
         </motion.p>
-
-        {/* Fun Facts Section */}
-        <motion.h2
-          className="fun-facts-heading"
-          initial={{ opacity: 0, y: 50 }} // Start off-screen and invisible
-          animate={{ opacity: 1, y: 0 }} // Animate into view
-          transition={{ duration: 0.5, delay: 0.6 }} // Smooth animation with delay
-        >
-          Fun Facts About Me
-        </motion.h2>
 
         {/* Carousel for Fun Facts */}
         <div className="carousel-container">
@@ -120,7 +109,7 @@ const About = () => {
                 className="fun-fact"
                 initial={{ opacity: 0, y: 50 }} 
                 animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.5, delay: (index + 4) * 0.2 }} // Staggered animation
+                transition={{ duration: 0.5, delay: (index + 3) * 0.2 }} // Staggered animation
               >
                 <h3>{fact.title}</h3>
                 <p>{fact.description}</p>

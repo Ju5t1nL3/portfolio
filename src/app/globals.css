@@ -293,16 +293,22 @@ a:link {
 }
 
 .about-heading {
-  font-size: calc(4rem + .5vw);
+  font-size: calc(6vh);
+  color: #3E5C76;
+  margin-top: -20vh;
+  text-align: left;
+  left: 1vh;
+  position: relative;
 }
 
 .about-blurb {
-  font-size: calc(1.5rem + .25vw);
-}
-
-/* Fun Facts Section */
-.fun-facts-heading {
-  font-size: calc(2rem + .25vw);
+  font-size: calc(2.29vh);
+  color: #748CAB;
+  position: relative;
+  text-align: left;
+  top: -1vh;
+  left: 1vh;
+  width: 120vh;
 }
 
 /* Carousel Container */
@@ -317,16 +323,18 @@ a:link {
   display: flex;
   flex-direction :row ; /* Horizontal row */
   justify-content :center ; /* Center horizontally */
-  gap :20px ; /* Space between each fact */
+  gap :5vh ; /* Space between each fact */
   margin-top :20px ;
-  width: 125vh;
   height: 30vh;
   overflow:hidden ; /* Hide overflow for smooth scrolling */
 }
 
 .fun-fact {
-  background-color: #FFFFFF; /* White background for each fact */
+  background-color: #d3dbe5; /* White background for each fact */
   padding: calc(2vh + .5vw);
+  border-radius: 3vh;
+  width: 30vh;
+  font-size: calc(1.42vh);
 }
 
 /* Carousel Arrows */
@@ -334,7 +342,7 @@ a:link {
    background-color :transparent ;
    border:none ;
    font-size :calc(3rem);
-   cursor:pointer ;
+   cursor: none;
 }
 
 .left-arrow{

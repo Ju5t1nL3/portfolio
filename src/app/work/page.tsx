@@ -21,7 +21,7 @@ const Work = () => {
   setTimeout(() => {
     iconContainer?.classList.remove('highlight');
   }, 2000); // Adjust time as necessary
-};
+  };
 
  return (
   <>
@@ -55,9 +55,7 @@ const Work = () => {
         <a href = "/resume.pdf" target = "_blank" rel = "noopenernoreferrer" className="nav-button">
           Resume
         </a>
-        <Link href="/contact" legacyBehavior passHref>
-          <a className="nav-button">Contact</a>
-        </Link>
+        <button onClick={handleContactClick} className="nav-button">Contact</button>
       </div>
       
 

@@ -1,12 +1,27 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 const About = () => {
   const pathname = usePathname();
+  const socialIconsRef = useRef<HTMLDivElement | null>(null);
+
+  const handleContactClick = () => {
+    // Scroll to social icons
+    socialIconsRef.current?.scrollIntoView({ behavior: "smooth" });
+  
+    // Trigger animation (using Framer Motion)
+    const iconContainer = document.querySelector('.social-icons');
+    iconContainer?.classList.add('highlight');
+  
+    // Remove highlight after 2 seconds
+    setTimeout(() => {
+      iconContainer?.classList.remove('highlight');
+    }, 2000); // Adjust time as necessary
+  };
 
   // State to control which set of panels is being shown
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -150,9 +165,7 @@ const About = () => {
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-button">
           Resume
         </a>
-        <Link href="/contact" legacyBehavior passHref>
-          <a className="nav-button">Contact</a>
-        </Link>
+        <button onClick={handleContactClick} className="nav-button">Contact</button>
       </div>
 
       {/* About Section */}
@@ -251,7 +264,7 @@ const About = () => {
       </section>
 
       {/* Social Media Icons */}
-      <div className="social-icons">
+      <div ref={socialIconsRef} className="social-icons">
         <a href="mailto:j622560@tamu.edu" target="_blank" rel="noopener noreferrer">
           <img src="/email.png" alt="Email" className="icon" />
         </a>

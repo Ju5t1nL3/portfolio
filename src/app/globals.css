@@ -431,3 +431,90 @@ li:hover .list-links{
   filter: grayscale(0%);
 }
 
+.valorant-pic{
+  margin-top: 10vh;
+  height: 6vh;
+  width: auto;
+  position: absolute;
+  border-radius: .5vh;
+  filter:grayscale(75%);
+  transition: filter, scale .3s ease-in-out;
+  right:28vh;
+  z-index: 1000;
+}
+
+.valorant-text{
+  color: #3E5C76;
+}
+
+.game-pics:has(.valorant-text:hover) .valorant-pic{
+  scale: 3;
+  filter: grayscale(0%);
+  z-index: 2000;
+}
+
+.league-pic{
+  margin-top: 10vh;
+  height: 6vh;
+  width: auto;
+  position: absolute;
+  border-radius: .5vh;
+  filter:grayscale(75%);
+  transition: filter, scale .3s ease-in-out;
+  right: 20vh;
+  z-index: 1000;
+}
+
+.game-pics:has(.league-text:hover) .league-pic{
+  scale: 3;
+  filter: grayscale(0%);
+  z-index: 2000;
+}
+
+.league-text{
+  color: #3E5C76;
+}
+
+.roblox-pic{
+  margin-top: 10vh;
+  height: 6vh;
+  width: auto;
+  position: absolute;
+  border-radius: .5vh;
+  filter:grayscale(75%);
+  transition: filter, scale .3s ease-in-out;
+  right: 11vh;
+  z-index: 1000;
+}
+
+.roblox-text{
+  color: #3E5C76;
+}
+
+.game-pics:has(.roblox-text:hover) .roblox-pic{
+  scale: 3;
+  filter: grayscale(0%);
+  z-index: 2000;
+}
+
+.minecraft-pic{
+  margin-top: 10vh;
+  height: 6vh;
+  width: auto;
+  position: absolute;
+  border-radius: .5vh;
+  filter:grayscale(75%);
+  transition: filter, scale .3s ease-in-out;
+  right: 3vh;
+  z-index: 1000;
+}
+
+.game-pics:has(.minecraft-text:hover) .minecraft-pic{
+  scale: 3;
+  filter: grayscale(0%);
+  z-index: 2000;
+}
+
+.minecraft-text{
+  color: #3E5C76;
+}

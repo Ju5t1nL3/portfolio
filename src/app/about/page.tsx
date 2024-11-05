@@ -154,8 +154,17 @@ const About = () => {
       </span>
     },
     { title: "Video Game Enjoyer", description: 
-      <span className="space-better">
-        When it comes to video games, I mainly play multiplayer games because I enjoy playing with friends more. At the moment, I mainly play Valorant, but I have also played League, Roblox, and Minecraft in the past.
+      <span className='game-pics'>
+        <span className="space-better">
+          When it comes to video games, I mainly play multiplayer games because I enjoy playing with friends more. At the moment, I mainly play <span className='valorant-text'>Valorant</span>, but I have also played 
+          <span className='league-text'>&nbsp;League</span>, 
+          <span className='roblox-text'>&nbsp;Roblox</span>, and 
+          <span className='minecraft-text'>&nbsp;Minecraft</span> in the past.
+        </span>
+        <img src="/valorant.png" alt="Dogs" className='valorant-pic'/>
+        <img src="/league.png" alt="Dogs" className='league-pic'/>
+        <img src="/roblox.png" alt="Dogs" className='roblox-pic'/>
+        <img src="/minecraft.png" alt="Dogs" className='minecraft-pic'/>
       </span>
     },
   ];

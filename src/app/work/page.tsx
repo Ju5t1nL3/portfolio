@@ -7,6 +7,21 @@ import { usePathname } from 'next/navigation';
 const Work = () => {
 
  const pathname = usePathname();
+ const socialIconsRef = useRef<HTMLDivElement | null>(null);
+
+ const handleContactClick = () => {
+  // Scroll to social icons
+  socialIconsRef.current?.scrollIntoView({ behavior: "smooth" });
+
+  // Trigger animation (using Framer Motion)
+  const iconContainer = document.querySelector('.social-icons');
+  iconContainer?.classList.add('highlight');
+
+  // Remove highlight after 2 seconds
+  setTimeout(() => {
+    iconContainer?.classList.remove('highlight');
+  }, 2000); // Adjust time as necessary
+};
 
  return (
   <>
@@ -46,7 +61,7 @@ const Work = () => {
       </div>
       
 
-      <div className="social-icons">
+      <div ref={socialIconsRef} className="social-icons">
         <a href="mailto:j622560@tamu.edu" target="_blank" rel="noopener noreferrer">
           <img src="/email.png" alt="Email" className="icon" />
         </a>

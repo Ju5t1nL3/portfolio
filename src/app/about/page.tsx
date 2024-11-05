@@ -278,19 +278,13 @@ const About = () => {
           )}
         </div>
         {/* Carousel Dots */}
-        <motion.div
-          className="carousel-dots"
-          initial={{ opacity: 0, y: 50 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.5, delay: 1 }}
-        >
-          {Array(totalPanels).fill().map((_, index) => (
+        <motion.div className="carousel-dots" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }}>
+          {Array.from({ length: totalPanels }).map((_, index) => (
             <span 
               key={index} 
               className={`dot ${index >= currentIndex && index < currentIndex + panelsToShow ? 'filled' : ''}`} 
             />
           ))}
-
         </motion.div>
       </section>
 

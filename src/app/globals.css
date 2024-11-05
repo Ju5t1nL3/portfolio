@@ -349,7 +349,17 @@ li{
 
 li:hover{
   scale:1.2;
-  filter: grayscale(0%)
+  filter: grayscale(0%);
+  text-decoration: none;
+}
+
+li:hover .list-links{
+  color:#748CAB;
+}
+
+.in-text-links{
+  text-decoration: underline;
+  color: #3E5C76;
 }
 
 .listpics{

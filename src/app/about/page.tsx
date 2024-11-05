@@ -24,43 +24,43 @@ const About = () => {
           <li>
             <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
               <img src="/python.png" alt="Python" className='listpics' />
-              &nbsp;&nbsp;Python
+              <span className="list-links">&nbsp;&nbsp;Python</span>
             </a>
           </li>
           <li>
             <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer">
               <img src="/java.png" alt="Java" className='listpics' />
-              &nbsp;&nbsp;Java
+              <span className="list-links">&nbsp;&nbsp;Java</span>
             </a>
           </li>
           <li>
             <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
               <img src="/typescript.png" alt="TypeScript" className='listpics' />
-              &nbsp;&nbsp;TypeScript
+              <span className="list-links">&nbsp;&nbsp;TypeScript</span>
             </a>
           </li>
           <li>
             <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
               <img src="/javascript.png" alt="JavaScript" className='listpics' />
-              &nbsp;&nbsp;JavaScript
+              <span className="list-links">&nbsp;&nbsp;JavaScript</span>
             </a>
           </li>
           <li>
             <a href="https://www.w3schools.com/sql/" target="_blank" rel="noopener noreferrer">
               <img src="/sql.png" alt="SQL" className='listpics' />
-              &nbsp;&nbsp;SQL
+              <span className="list-links">&nbsp;&nbsp;SQL</span>
             </a>
           </li>
           <li>
             <a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">
               <img src="/html.png" alt="HTML" className='listpics' />
-              &nbsp;&nbsp;HTML
+              <span className="list-links">&nbsp;&nbsp;HTML</span>
             </a>
           </li>
           <li>
             <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noopener noreferrer">
               <img src="/css.png" alt="CSS" className='listpics' />
-              &nbsp;&nbsp;CSS
+              <span className="list-links">&nbsp;&nbsp;CSS</span>
             </a>
           </li>
         </ul>
@@ -72,37 +72,37 @@ const About = () => {
           <li>
             <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">
               <img src="/pytorch.png" alt="PyTorch" className='listpics' />
-              &nbsp;&nbsp;PyTorch
+              <span className="list-links">&nbsp;&nbsp;PyTorch</span>
             </a>
           </li>
           <li>
             <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
               <img src="/nextjs.png" alt="Next.js" className='listpics' />
-              &nbsp;&nbsp;Next.js
+              <span className="list-links">&nbsp;&nbsp;Next.js</span>
             </a>
           </li>
           <li>
             <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
               <img src="/react.png" alt="React" className='listpics' />
-              &nbsp;&nbsp;React
+              <span className="list-links">&nbsp;&nbsp;React</span>
             </a>
           </li>
           <li>
             <a href="https://flask.palletsprojects.com/en/stable/" target="_blank" rel="noopener noreferrer">
               <img src="/flask.png" alt="Flask" className='listpics' />
-              &nbsp;&nbsp;Flask
+              <span className="list-links">&nbsp;&nbsp;Flask</span>
             </a>
           </li>
           <li>
             <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
               <img src="/tailwind.png" alt="Tailwind CSS" className='listpics' />
-              &nbsp;&nbsp;Tailwind CSS
+              <span className="list-links">&nbsp;&nbsp;Tailwind CSS</span>
             </a>
           </li>
           <li>
             <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
               <img src="/git.png" alt="Git" className='listpics' />
-              &nbsp;&nbsp;Git
+              <span className="list-links">&nbsp;&nbsp;Git</span>
             </a>
           </li>
         </ul>
@@ -179,7 +179,7 @@ const About = () => {
           <br></br>
           <br></br>
           Currently, I'm working on creating and training a model with computer vision by utilizing PyTorch. With a group of friends, I am also competing in the 
-          <a href="https://ig.utexas.edu/texas-space-grant/2024/space-teams-university-lunar-search-rescue-design-challenge/" target="_blank" rel="noopener noreferrer"> Texas Lunar Search & Rescue Team competition, </a>
+          <a href="https://ig.utexas.edu/texas-space-grant/2024/space-teams-university-lunar-search-rescue-design-challenge/" target="_blank" rel="noopener noreferrer" className="in-text-links"> Texas Lunar Search & Rescue Team competition, </a>
           where we just completed the first round!
 
         </motion.p>

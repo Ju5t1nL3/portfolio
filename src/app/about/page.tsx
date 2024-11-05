@@ -135,7 +135,7 @@ const About = () => {
           When I&apos;m not doomscrolling on TikTok before bed, I love to read, preferably in the romance and murder mystery genre.
           <br></br>
           <br></br>
-          Current Favorite Books (I &apos;t choose):
+          Current Favorite Books (I can&apos;t choose):
           <ul>
             <li className='normal-list-spacing'><a href="https://www.goodreads.com/book/show/54493401-project-hail-mary" target="_blank" rel="noopener noreferrer" className='list-links'>Project Hail Mary by Andy Weir</a></li>
             <li className='normal-list-spacing'><a href="https://www.goodreads.com/book/show/61918816-yours-truly" target="_blank" rel="noopener noreferrer" className='list-links'>Yours Truly by Abby Jiminez</a></li>

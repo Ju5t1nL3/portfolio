@@ -2,14 +2,9 @@
 
 import { useEffect } from 'react';
 import styles from './style.module.scss';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useMotionValue } from 'framer-motion';
 
-// Define the type for the props
-interface RegCursorProps {
-  regElement?: string; // Optional prop for reg element selector
-}
-
-export default function RegCursor({ regElement }: RegCursorProps) {
+export default function RegCursor() {
   const cursorSize = 15;
 
   // Motion values for mouse x and y coordinates

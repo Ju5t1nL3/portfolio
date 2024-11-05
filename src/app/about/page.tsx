@@ -132,10 +132,10 @@ const About = () => {
     { title: "Avid Reader", description:
       <>
         <span className="space-better">
-          When I'm not doomscrolling on TikTok before bed, I love to read, preferably in the romance and murder mystery genre.
+          When I&apos;m not doomscrolling on TikTok before bed, I love to read, preferably in the romance and murder mystery genre.
           <br></br>
           <br></br>
-          Current Favorite Books (I can't choose):
+          Current Favorite Books (I &apos;t choose):
           <ul>
             <li className='normal-list-spacing'><a href="https://www.goodreads.com/book/show/54493401-project-hail-mary" target="_blank" rel="noopener noreferrer" className='list-links'>Project Hail Mary by Andy Weir</a></li>
             <li className='normal-list-spacing'><a href="https://www.goodreads.com/book/show/61918816-yours-truly" target="_blank" rel="noopener noreferrer" className='list-links'>Yours Truly by Abby Jiminez</a></li>
@@ -147,7 +147,7 @@ const About = () => {
     { title: "Sports Enthusiast", description: 
       <span className="space-better">
         I started playing sports when I was a kid and have never stopped since then. The sports I play include
-        soccer, basketball, snowboarding, tennis, pickleball, and much more (I don't have pictures of me playing but I promise I'm at least semi-athletic).
+        soccer, basketball, snowboarding, tennis, pickleball, and much more (I don&apos;t have pictures of me playing but I promise I&apos;m at least semi-athletic).
         <br></br>
         <br></br>
         When watching on tv, I ALWAYS root for the Houston teams (my current favorite is the Texans -- SWARM!!)
@@ -218,11 +218,11 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }} // Animate into view
           transition={{ duration: 0.5, delay: 0.4 }} // Smooth animation with delay
         >
-          Hi there! I'm Justin -- a current Engineering Honors student at Texas A&M studying Computer Science with planned minors in Mathematics and Statistics (May 2028). However, I originally hail from Sugar Land, TX. I love to program in general, but my interests mainly
+          Hi there! I&apos;m Justin -- a current Engineering Honors student at Texas A&M studying Computer Science with planned minors in Mathematics and Statistics (May 2028). However, I originally hail from Sugar Land, TX. I love to program in general, but my interests mainly
           lie within machine learning. With that said, you can often find me at a hackathon (I already plan to attend HackUTD!).
           <br></br>
           <br></br>
-          Currently, I'm working on creating and training a model with computer vision by utilizing PyTorch. With a group of friends, I am also competing in the 
+          Currently, I&apos;m working on creating and training a model with computer vision by utilizing PyTorch. With a group of friends, I am also competing in the 
           <a href="https://ig.utexas.edu/texas-space-grant/2024/space-teams-university-lunar-search-rescue-design-challenge/" target="_blank" rel="noopener noreferrer" className="in-text-links"> Texas Lunar Search & Rescue Team competition, </a>
           where we just completed the first round!
 

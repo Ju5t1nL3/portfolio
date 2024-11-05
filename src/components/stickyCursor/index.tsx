@@ -4,12 +4,7 @@ import { useEffect } from 'react';
 import styles from './style.module.scss';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
-// Define the type for the props
-interface StickyCursorProps {
-  stickyElement?: string; // Optional prop for sticky element selector
-}
-
-export default function StickyCursor({ stickyElement }: StickyCursorProps) {
+export default function StickyCursor() {
   const cursorSize = 30;
 
   // Motion values for mouse x and y coordinates

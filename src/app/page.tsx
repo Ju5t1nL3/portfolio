@@ -102,7 +102,7 @@ const Page = () => {
             animate={{ opacity: 1, y: 0 }} // Animate into view
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }} // Delayed animation for subheading
           >
-            I focus on software engineering with a purpose. Currently studying at Texas A&M, I'm passionate about creating to improve the world surrounding me.
+            I focus on software engineering with a purpose. Currently studying at Texas A&M, I&apos;m passionate about creating to improve the world surrounding me.
           </motion.h2>
         </div>
         {/* Top Navigation Buttons */}

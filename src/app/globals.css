@@ -295,7 +295,7 @@ a:link {
 .about-heading {
   font-size: calc(6vh);
   color: #3E5C76;
-  margin-top: -10vh;
+  margin-top: -2.5vh;
   text-align: left;
   left: 1vh;
   position: relative;
@@ -368,6 +368,10 @@ li:hover .list-links{
   height: 2.5vh;
 }
 
+.space-better{
+  line-height: 150%;
+}
+
 /* Carousel Arrows */
 .carousel-arrow {
    background-color :transparent ;
@@ -404,3 +408,19 @@ li:hover .list-links{
 .filled{
     background-color:#22577A; /* Filled dot color */
 }
+
+.dogs-pic{
+  margin-top: 10vh;
+  height: 6vh;
+  width: auto;
+  position: absolute;
+  border-radius: .5vh;
+  filter:grayscale(75%);
+  transition: filter, scale .3s ease-in-out;
+}
+
+.dogs-pic:hover{
+  scale: 3;
+  filter: grayscale(0%);
+}
+

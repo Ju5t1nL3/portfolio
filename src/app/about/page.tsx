@@ -122,8 +122,17 @@ const About = () => {
           </li>
         </ul>
       </> },
-    { title: "🌎 Traveler", description: "I've traveled to over 10 countries and hope to visit many more in the future." },
-    { title: "🎨 Creative Thinker", description: "I enjoy drawing and sketching in my spare time. It's a great way to relax and express creativity." },
+    { title: "Dog Lover", description: 
+      <>
+        <span className="space-better">I have 3 dogs! Like me, they are also all J names. Sadly they are all in Sugar Land right now :(</span>
+        <img src="/dogs.png" alt="Dogs" className='dogs-pic'/>
+      </>
+      
+    },
+    { title: "Avid Reader", description:
+      <>
+      </> 
+    },
     { title: "💻 Tech Enthusiast", description: "I'm always excited about learning new technologies and staying up-to-date with industry trends." },
     { title: "🏃‍♂️ Fitness Buff", description: "I love staying active by running and working out regularly." },
     { title: "🍕 Pizza Lover", description: "Pizza is my go-to comfort food!" }

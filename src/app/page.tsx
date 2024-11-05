@@ -92,7 +92,7 @@ const Page = () => {
             animate={{ opacity: 1, y: 0 }} // Animate into view
             transition={{ duration: 1, ease: "easeOut" }} // Smooth animation
           >
-            Hi, I'm Justin.
+            Hi, I&apos;m Justin.
           </motion.h1>
 
           {/* Subheading Animation */}

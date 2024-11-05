@@ -344,7 +344,14 @@ a:link {
 li{
   filter: grayscale(100%);
   transition: filter, scale .3s ease-in-out;
+}
+
+.list-spacing{
   line-height: 250%;
+}
+
+.normal-list-spacing{
+  line-height: 150%;
 }
 
 li:hover{

@@ -27,7 +27,7 @@ const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Total number of panels and how many to show at a time
-  const totalPanels = 7;
+  const totalPanels = 6;
   const panelsToShow = 3;
 
   // Fun facts data
@@ -36,43 +36,43 @@ const About = () => {
       description: 
       <>
         <ul className="no-bullets">
-          <li>
+          <li className="list-spacing">
             <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
               <img src="/python.png" alt="Python" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;Python</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer">
               <img src="/java.png" alt="Java" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;Java</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
               <img src="/typescript.png" alt="TypeScript" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;TypeScript</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
               <img src="/javascript.png" alt="JavaScript" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;JavaScript</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://www.w3schools.com/sql/" target="_blank" rel="noopener noreferrer">
               <img src="/sql.png" alt="SQL" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;SQL</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">
               <img src="/html.png" alt="HTML" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;HTML</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noopener noreferrer">
               <img src="/css.png" alt="CSS" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;CSS</span>
@@ -84,37 +84,37 @@ const About = () => {
       description: 
       <>
         <ul className="no-bullets">
-          <li>
+          <li className="list-spacing">
             <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">
               <img src="/pytorch.png" alt="PyTorch" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;PyTorch</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
               <img src="/nextjs.png" alt="Next.js" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;Next.js</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
               <img src="/react.png" alt="React" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;React</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://flask.palletsprojects.com/en/stable/" target="_blank" rel="noopener noreferrer">
               <img src="/flask.png" alt="Flask" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;Flask</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
               <img src="/tailwind.png" alt="Tailwind CSS" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;Tailwind CSS</span>
             </a>
           </li>
-          <li>
+          <li className="list-spacing">
             <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
               <img src="/git.png" alt="Git" className='listpics' />
               <span className="list-links">&nbsp;&nbsp;Git</span>
@@ -131,11 +131,33 @@ const About = () => {
     },
     { title: "Avid Reader", description:
       <>
+        <span className="space-better">
+          When I'm not doomscrolling on TikTok before bed, I love to read, preferably in the romance and murder mystery genre.
+          <br></br>
+          <br></br>
+          Current Favorite Books (I can't choose):
+          <ul>
+            <li className='normal-list-spacing'><a href="https://www.goodreads.com/book/show/54493401-project-hail-mary" target="_blank" rel="noopener noreferrer" className='list-links'>Project Hail Mary by Andy Weir</a></li>
+            <li className='normal-list-spacing'><a href="https://www.goodreads.com/book/show/61918816-yours-truly" target="_blank" rel="noopener noreferrer" className='list-links'>Yours Truly by Abby Jiminez</a></li>
+          </ul>
+          Currently Reading: <a href="https://www.goodreads.com/book/show/61918816-yours-truly" target="_blank" rel="noopener noreferrer" className='in-text-links'>Listen for the Lie by Amy Tintera</a>
+        </span>
       </> 
     },
-    { title: "💻 Tech Enthusiast", description: "I'm always excited about learning new technologies and staying up-to-date with industry trends." },
-    { title: "🏃‍♂️ Fitness Buff", description: "I love staying active by running and working out regularly." },
-    { title: "🍕 Pizza Lover", description: "Pizza is my go-to comfort food!" }
+    { title: "Sports Enthusiast", description: 
+      <span className="space-better">
+        I started playing sports when I was a kid and have never stopped since then. The sports I play include
+        soccer, basketball, snowboarding, tennis, pickleball, and much more (I don't have pictures of me playing but I promise I'm at least semi-athletic).
+        <br></br>
+        <br></br>
+        When watching on tv, I ALWAYS root for the Houston teams (my current favorite is the Texans -- SWARM!!)
+      </span>
+    },
+    { title: "Video Game Enjoyer", description: 
+      <span className="space-better">
+        When it comes to video games, I mainly play multiplayer games because I enjoy playing with friends more. At the moment, I mainly play Valorant, but I have also played League, Roblox, and Minecraft in the past.
+      </span>
+    },
   ];
 
   // Handle next/previous clicks

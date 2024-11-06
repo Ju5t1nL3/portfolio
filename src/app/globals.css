@@ -40,7 +40,7 @@ a:link {
   font-size: 25vh; /* Use viewport width for font size instead of fixed pixels for responsiveness */
   position: relative; /* Make J and L relative so that 'ustin' and 'e' can be positioned next to them */
   color: #748CAB;
-  font-family: 'Lucida Handwriting', 'Comic Sans MS'; /* Handwritten style */
+  font-family: 'Lucida Handwriting', 'GeistSans'; /* Handwritten style */
 }
 
 /* Extend top of J to meet L (π-like symbol) */

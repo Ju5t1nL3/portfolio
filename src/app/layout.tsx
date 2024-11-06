@@ -17,9 +17,6 @@ export default function RootLayout({
   return (
 
     <html lang="en" className={GeistSans.className}>
-      <head>
-        <link rel="icon" type="image/png" href="icon.png"></link>
-      </head>
       <body>
         <StickyCursor/>
         <RegCursor/>
